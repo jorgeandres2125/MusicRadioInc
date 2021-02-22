@@ -1,0 +1,6 @@
+C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.Core\bin\Debug\MusicRadioStore.Core.dll
+C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.Core\bin\Debug\MusicRadioStore.Core.pdb
+C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.Core\obj\Debug\MusicRadioStore.Core.csprojAssemblyReference.cache
+C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.Core\obj\Debug\MusicRadioStore.Core.csproj.CoreCompileInputs.cache
+C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.Core\obj\Debug\MusicRadioStore.Core.dll
+C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.Core\obj\Debug\MusicRadioStore.Core.pdb

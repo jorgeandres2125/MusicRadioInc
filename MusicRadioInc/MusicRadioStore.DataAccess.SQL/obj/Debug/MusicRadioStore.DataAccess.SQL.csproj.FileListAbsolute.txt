@@ -1,0 +1,16 @@
+C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.DataAccess.SQL\bin\Debug\MusicRadioStore.DataAccess.SQL.dll.config
+C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.DataAccess.SQL\bin\Debug\MusicRadioStore.DataAccess.SQL.dll
+C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.DataAccess.SQL\bin\Debug\MusicRadioStore.DataAccess.SQL.pdb
+C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.DataAccess.SQL\bin\Debug\EntityFramework.dll
+C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.DataAccess.SQL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.DataAccess.SQL\bin\Debug\MusicRadioStore.Core.dll
+C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.DataAccess.SQL\bin\Debug\MusicRadioStore.Core.pdb
+C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.DataAccess.SQL\bin\Debug\EntityFramework.xml
+C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.DataAccess.SQL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.DataAccess.SQL\obj\Debug\MusicRadioStore.DataAccess.SQL.csprojAssemblyReference.cache
+C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.DataAccess.SQL\obj\Debug\MusicRadioStore.DataAccess.SQL.csproj.CoreCompileInputs.cache
+C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.DataAccess.SQL\obj\Debug\MusicRadioStore.DataAccess.SQL.csproj.CopyComplete
+C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.DataAccess.SQL\obj\Debug\MusicRadioStore.DataAccess.SQL.dll
+C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.DataAccess.SQL\obj\Debug\MusicRadioStore.DataAccess.SQL.pdb
+C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.DataAccess.SQL\obj\Debug\MusicRadioStore.DataAccess.SQL.Migrations.InitialSchema.resources
+C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.DataAccess.SQL\obj\Debug\MusicRadioStore.DataAccess.SQL.csproj.GenerateResource.cache

@@ -1,0 +1,14 @@
+C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.Services\bin\Debug\MusicRadioStore.Services.dll
+C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.Services\bin\Debug\MusicRadioStore.Services.pdb
+C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.Services\bin\Debug\MusicRadioStore.Core.dll
+C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.Services\bin\Debug\MusicRadioStore.DataAccess.SQL.dll
+C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.Services\bin\Debug\EntityFramework.dll
+C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.Services\bin\Debug\MusicRadioStore.Core.pdb
+C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.Services\bin\Debug\MusicRadioStore.DataAccess.SQL.pdb
+C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.Services\bin\Debug\MusicRadioStore.DataAccess.SQL.dll.config
+C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.Services\bin\Debug\EntityFramework.xml
+C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.Services\obj\Debug\MusicRadioStore.Services.csprojAssemblyReference.cache
+C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.Services\obj\Debug\MusicRadioStore.Services.csproj.CoreCompileInputs.cache
+C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.Services\obj\Debug\MusicRadioStore.Services.csproj.CopyComplete
+C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.Services\obj\Debug\MusicRadioStore.Services.dll
+C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.Services\obj\Debug\MusicRadioStore.Services.pdb

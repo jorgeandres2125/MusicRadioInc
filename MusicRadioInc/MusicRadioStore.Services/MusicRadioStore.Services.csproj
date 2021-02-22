@@ -33,6 +33,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,6 +43,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MusicRadioStore.Core\MusicRadioStore.Core.csproj">
+      <Project>{56cbb03d-c9af-496e-bfe2-d2c2b29eb548}</Project>
+      <Name>MusicRadioStore.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MusicRadioStore.DataAccess.SQL\MusicRadioStore.DataAccess.SQL.csproj">
+      <Project>{edcbbc58-4d77-4074-b01c-f2fbcd659945}</Project>
+      <Name>MusicRadioStore.DataAccess.SQL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,0 +1,48 @@
+﻿@using Microsoft.AspNet.Identity
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="@Url.Action("Index", "Home", null)">
+        <img src="~/Content/AppImages/cassette.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+        Music Radio Inc.
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor02">
+        <ul class="nav navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="@Url.Action("About", "Home", null)">
+                    About
+                </a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="@Url.Action("Contact", "Home", null)">
+                    Contact
+                </a>
+            </li>
+
+            @if (!Request.IsAuthenticated)
+            {
+                <li class="nav-item active">
+                    @Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink", @class = "nav-link" })
+                </li>
+                <li class="nav-item active">
+                    @Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink", @class = "nav-link" })
+                </li>
+            }
+            else
+            {
+                using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "nav-link" }))
+                {
+                    @Html.AntiForgeryToken()
+
+                    <li class="nav-item active">
+                        @Html.ActionLink("Hola " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { @class = "nav-link" })
+                    </li>
+                    <li class="nav-item active">
+                        <a href="javascript:document.getElementById('logoutForm').submit()">Salir</a>
+                    </li>
+                }
+            }
+        </ul>
+    </div>
+</nav>
