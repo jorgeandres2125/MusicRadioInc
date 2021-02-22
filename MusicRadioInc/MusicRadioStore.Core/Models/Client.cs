@@ -29,10 +29,5 @@ namespace MusicRadioStore.Core.Models
         [RegularExpression("([0-9]+)", ErrorMessage = "Este campo es solo numerico")]
         public string Phone { get; set; }
 
-        public Client()
-        {
-            this.Id = Guid.NewGuid().ToString("N").Substring(0,10);
-        }
-
     }
 }
