@@ -15,6 +15,8 @@ namespace MusicRadioStore.Core.Models
         [StringLength(10)]
         public string Id { get; set; }
         [Required]
+        public string UserId { get; set; }
+        [Required]
         [StringLength(100)]
         public string Name { get; set; }
         [Required]

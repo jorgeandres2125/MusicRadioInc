@@ -56,6 +56,10 @@
     <Compile Include="Migrations\202102220923403_InitialSchema.designer.cs">
       <DependentUpon>202102220923403_InitialSchema.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202102230426213_AddUserIdToClient.cs" />
+    <Compile Include="Migrations\202102230426213_AddUserIdToClient.designer.cs">
+      <DependentUpon>202102230426213_AddUserIdToClient.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -72,6 +76,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202102220923403_InitialSchema.resx">
       <DependentUpon>202102220923403_InitialSchema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102230426213_AddUserIdToClient.resx">
+      <DependentUpon>202102230426213_AddUserIdToClient.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
