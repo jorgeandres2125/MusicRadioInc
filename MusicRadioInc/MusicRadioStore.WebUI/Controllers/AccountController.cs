@@ -8,6 +8,8 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
+using MusicRadioStore.Core.Contracts.Services;
+using MusicRadioStore.Core.Models;
 using MusicRadioStore.WebUI.Models;
 
 namespace MusicRadioStore.WebUI.Controllers
@@ -18,14 +20,11 @@ namespace MusicRadioStore.WebUI.Controllers
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
-        public AccountController()
-        {
-        }
+        private readonly IClientService clientService;
 
-        public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )
+        public AccountController(IClientService _clientService)
         {
-            UserManager = userManager;
-            SignInManager = signInManager;
+            clientService = _clientService;
         }
 
         public ApplicationSignInManager SignInManager
@@ -151,23 +150,46 @@ namespace MusicRadioStore.WebUI.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
-                var result = await UserManager.CreateAsync(user, model.Password);
-                if (result.Succeeded)
+                var oldClient = await clientService.FindAsync(model.Id, model.Email);
+                if (oldClient == null)
                 {
-                    await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
-                    
-                    // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
-                    // Send an email with this link
-                    // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
-                    // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
-                    // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
+                    var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                    var result = await UserManager.CreateAsync(user, model.Password);
+                    if (result.Succeeded)
+                    {
 
-                    return RedirectToAction("Index", "Home");
+                        //Rol is add to user
+                        await UserManager.AddToRoleAsync(user.Id, "Cliente");
+
+                        //register the customer model
+                        Client client = new Client()
+                        {
+                            UserId = user.Id,
+                            Mail = model.Email,
+                            Id = model.Id,
+                            Name = model.Name,
+                            Direction = model.Direction,
+                            Phone = model.Phone
+                        };
+                        await clientService.InsertAsync(client);
+
+                        await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
+
+                        // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
+                        // Send an email with this link
+                        // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
+                        // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
+                        // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
+
+                        return RedirectToAction("Index", "Home");
+                    }
+                    AddErrors(result);
                 }
-                AddErrors(result);
+                else 
+                {
+                    ModelState.AddModelError("Id", "Identificación o Email ya existen");
+                }
             }
-
             // If we got this far, something failed, redisplay form
             return View(model);
         }

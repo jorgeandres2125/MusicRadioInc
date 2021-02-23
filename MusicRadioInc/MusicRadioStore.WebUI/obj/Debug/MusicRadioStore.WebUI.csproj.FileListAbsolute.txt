@@ -101,3 +101,15 @@ C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.Web
 C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.WebUI\bin\MusicRadioStore.Services.pdb
 C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.WebUI\obj\Debug\MusicRadioStore.WebUI.Migrations.InitialSchemaIdentity.resources
 C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.WebUI\obj\Debug\MusicRadioStore.WebUI.csproj.GenerateResource.cache
+C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.WebUI\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.WebUI\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.WebUI\bin\Unity.Abstractions.dll
+C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.WebUI\bin\Unity.Container.dll
+C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.WebUI\bin\Unity.Mvc.dll
+C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.WebUI\bin\WebActivatorEx.dll
+C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.WebUI\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.WebUI\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.WebUI\bin\Unity.Abstractions.pdb
+C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.WebUI\bin\Unity.Container.pdb
+C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.WebUI\bin\Unity.Mvc.pdb
+C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.WebUI\bin\Unity.Mvc.xml
