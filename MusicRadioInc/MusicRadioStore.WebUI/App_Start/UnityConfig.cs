@@ -47,8 +47,12 @@ namespace MusicRadioStore.WebUI
             // TODO: Register your type's mappings here.
             // container.RegisterType<IProductRepository, ProductRepository>();
             container.RegisterType<IClientRepository, ClientRepository>();
+            container.RegisterType<IAlbumSetRepository, AlbumSetRepository>();
+            container.RegisterType<ISongSetRepository, SongSetRepository>();
 
             container.RegisterType<IClientService, ClientService>();
+            container.RegisterType<IAlbumSetService, AlbumSetService>();
+            container.RegisterType<ISongSetService, SongSetService>();
         }
     }
 }

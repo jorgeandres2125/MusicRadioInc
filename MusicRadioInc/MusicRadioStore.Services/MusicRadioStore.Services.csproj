@@ -43,7 +43,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\AlbumSetService.cs" />
     <Compile Include="Services\ClientService.cs" />
+    <Compile Include="Services\SongSetService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MusicRadioStore.Core\MusicRadioStore.Core.csproj">

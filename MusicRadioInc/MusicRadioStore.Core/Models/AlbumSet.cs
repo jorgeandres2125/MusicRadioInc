@@ -25,5 +25,7 @@ namespace MusicRadioStore.Core.Models
         [Required]
         [Range(0, 100000)]
         public decimal Price { get; set; }
+
+        public ICollection<SongSet> SongSets { get; set; }
     }
 }
