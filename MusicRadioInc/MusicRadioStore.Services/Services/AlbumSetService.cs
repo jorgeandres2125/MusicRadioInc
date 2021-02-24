@@ -43,5 +43,10 @@ namespace MusicRadioStore.Services.Services
                 .ToList<AlbumSetViewModel>();
             return list;
         }
+
+        public void Update(AlbumSet albumSet)
+        {
+            repository.Update(albumSet);
+        }
     }
 }

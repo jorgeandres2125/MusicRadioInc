@@ -33,7 +33,7 @@ namespace MusicRadioStore.WebUI.Controllers
             };
             return View(viewModel);
         }
-
+        #region CRUD Album
         public ActionResult CreateAlbum()
         {
             var modelView = new AlbumSetViewModel();
@@ -72,6 +72,60 @@ namespace MusicRadioStore.WebUI.Controllers
             }
         }
 
+        public ActionResult EditAlbum(int Id)
+        {
+            AlbumSet albumSet = albumSetService.Find(Id);
+            if (albumSet == null)
+            {
+                return HttpNotFound();
+            }
+            else
+            {
+                var modelView = new AlbumSetViewModel()
+                {
+                    Id = albumSet.Id,
+                    Name = albumSet.Name,
+                    Image = albumSet.Image,
+                    Price = albumSet.Price.ToString()
+                };
+                return View(modelView);
+            }
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult EditAlbum(AlbumSetViewModel albumSetViewModel, HttpPostedFileBase file)
+        {
+            AlbumSet albumSetToEdit = albumSetService.Find(albumSetViewModel.Id);
+            if (albumSetToEdit == null)
+            {
+                return HttpNotFound();
+            }
+            else
+            {
+                if (!ModelState.IsValid)
+                {
+                    return View(albumSetViewModel);
+                }
+                else
+                {
+                    if (file != null)
+                    {
+                        var nameFile = long.Parse(DateTime.UtcNow.ToString("yyyyMMddHHmmssfff")).ToString();
+                        albumSetViewModel.Image = nameFile + Path.GetExtension(file.FileName);
+                        file.SaveAs(Server.MapPath("//Content//AlbumImages//") + albumSetViewModel.Image);
+                        albumSetToEdit.Image = albumSetViewModel.Image;
+                    }
+                    albumSetToEdit.Name = albumSetViewModel.Name;
+                    albumSetToEdit.Price = decimal.Parse(albumSetViewModel.Price);
+                    albumSetService.Update(albumSetToEdit);
+                    return RedirectToAction("Index");
+                }
+            }
+        }
+        #endregion
+
+        #region CRUD Song
         public ActionResult CreateSong()
         {
             var modelView = new AlbumSetsManagerCreateSongViewModel()
@@ -81,7 +135,6 @@ namespace MusicRadioStore.WebUI.Controllers
             };
             return View(modelView);
         }
-
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult CreateSong(AlbumSetsManagerCreateSongViewModel viewModel)
@@ -103,5 +156,6 @@ namespace MusicRadioStore.WebUI.Controllers
                 return RedirectToAction("Index");
             }
         }
+        #endregion
     }
 }

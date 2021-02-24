@@ -42,5 +42,16 @@ namespace MusicRadioStore.DataAccess.SQL.Repositories
             parameters[2] = new SqlParameter("@Price", albumSet.Price);
             database.ExecuteSqlCommand(sqlCommand, parameters);
         }
+
+        public void Update(AlbumSet albumSet)
+        {
+            var sqlCommand = "SP_UPDATE_ALBUMSET @Id, @Name, @Image, @Price";
+            object[] parameters = new object[4];
+            parameters[0] = new SqlParameter("@Id", albumSet.Id);
+            parameters[1] = new SqlParameter("@Name", albumSet.Name);
+            parameters[2] = new SqlParameter("@Image", albumSet.Image);
+            parameters[3] = new SqlParameter("@Price", albumSet.Price);
+            database.ExecuteSqlCommand(sqlCommand, parameters);
+        }
     }
 }

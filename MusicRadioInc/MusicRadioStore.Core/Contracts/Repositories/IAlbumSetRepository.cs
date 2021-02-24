@@ -12,5 +12,6 @@ namespace MusicRadioStore.Core.Contracts.Repositories
         IQueryable<AlbumSet> Collection();
         AlbumSet Find(int Id);
         void Insert(AlbumSet albumSet);
+        void Update(AlbumSet albumSet);
     }
 }

@@ -13,5 +13,6 @@ namespace MusicRadioStore.Core.Contracts.Services
         List<AlbumSetViewModel> ListViewModel();
         AlbumSet Find(int Id);
         void Insert(AlbumSet albumSet);
+        void Update(AlbumSet albumSet);
     }
 }

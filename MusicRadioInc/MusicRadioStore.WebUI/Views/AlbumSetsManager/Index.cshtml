@@ -27,26 +27,33 @@ else
                 <th>Albúm</th>
                 <th>Precio</th>
                 <th>Canciones</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
             @foreach (var album in Model.AlbumSets)
             {
-                <tr>
-                    <td>
-                        <img class="img-thumbnail" style="height:70px" src="~/Content/AlbumImages/@album.Image" />
-                    </td>
-                    <td>@album.Name</td>
-                    <td>$@album.Price</td>
-                    <td>
-                        <ul>
-                            @foreach (var cancion in album.SongSets)
-                            { 
-                              <li>@cancion.Name</li>
-                            }
-                        </ul>
-                    </td>
-                </tr>
+            <tr>
+                <td>
+                    <img class="img-thumbnail" style="height:70px" src="~/Content/AlbumImages/@album.Image" />
+                </td>
+                <td>@album.Name</td>
+                <td>$@album.Price</td>
+                <td>
+                    <ul>
+                        @foreach (var cancion in album.SongSets)
+                        {
+                            <li>@cancion.Name</li>
+                        }
+                    </ul>
+                </td>
+                <td>
+                    <a class="btn btn-primary" href="@Url.Action("EditAlbum", "AlbumSetsManager", new { Id = album.Id })">
+                        Editar Albúm
+                    </a>
+
+                </td>
+            </tr>
             }
         </tbody>
     </table>

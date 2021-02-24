@@ -401,6 +401,7 @@
     <Content Include="Views\AlbumSetsManager\Index.cshtml" />
     <Content Include="Views\AlbumSetsManager\CreateAlbum.cshtml" />
     <Content Include="Views\AlbumSetsManager\CreateSong.cshtml" />
+    <Content Include="Views\AlbumSetsManager\EditAlbum.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
