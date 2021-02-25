@@ -18,9 +18,26 @@ namespace MusicRadioStore.Services.Services
             this.repository = _repository;
         }
 
+        
+
         public void Insert(SongSet songSet)
         {
             repository.Insert(songSet);
+        }
+
+        public SongSet Find(int albumId, int songId)
+        {
+            return repository.Find(albumId,songId);
+        }
+
+        public void Update(SongSet songSet)
+        {
+            repository.Update(songSet);
+        }
+
+        public void Delete(int Id)
+        {
+            repository.Delete(Id);
         }
     }
 }

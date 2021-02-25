@@ -28,6 +28,8 @@ namespace MusicRadioStore.DataAccess.SQL.Repositories
             return dbAlbumSet.Include(r => r.SongSets);
         }
 
+        
+
         public AlbumSet Find(int Id)
         {
             return dbAlbumSet.Find(Id);
@@ -51,6 +53,14 @@ namespace MusicRadioStore.DataAccess.SQL.Repositories
             parameters[1] = new SqlParameter("@Name", albumSet.Name);
             parameters[2] = new SqlParameter("@Image", albumSet.Image);
             parameters[3] = new SqlParameter("@Price", albumSet.Price);
+            database.ExecuteSqlCommand(sqlCommand, parameters);
+        }
+
+        public void Delete(int Id)
+        {
+            var sqlCommand = "SP_DELETE_ALBUMSET @Id";
+            object[] parameters = new object[1];
+            parameters[0] = new SqlParameter("@Id", Id);
             database.ExecuteSqlCommand(sqlCommand, parameters);
         }
     }

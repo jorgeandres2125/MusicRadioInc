@@ -123,6 +123,20 @@ namespace MusicRadioStore.WebUI.Controllers
                 }
             }
         }
+
+        public ActionResult DeleteAlbum(int Id)
+        {
+            AlbumSet albumSetToEdit = albumSetService.Find(Id);
+            if (albumSetToEdit == null)
+            {
+                return HttpNotFound();
+            }
+            else
+            {
+                albumSetService.Delete(Id);
+                return RedirectToAction("Index");
+            }
+        }
         #endregion
 
         #region CRUD Song
@@ -153,6 +167,64 @@ namespace MusicRadioStore.WebUI.Controllers
                     AlbumSet = songSetViewModel.AlbumSet
                 };
                 songSetService.Insert(songSet);
+                return RedirectToAction("Index");
+            }
+        }
+
+        public ActionResult EditSong(int albumId, int songId)
+        {
+            SongSet songSet = songSetService.Find(albumId, songId);
+            if (songSet == null)
+            {
+                return HttpNotFound();
+            }
+            else
+            {
+                var modelView = new SongSetViewModel()
+                {
+                    Id = songSet.Id,
+                    Name = songSet.Name,
+                    AlbumSetId = songSet.AlbumSetId,
+                    AlbumSet = songSet.AlbumSet
+                };
+                return View(modelView);
+            }
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult EditSong(SongSetViewModel songSetViewModel)
+        {
+            SongSet songSetToEdit = songSetService.Find(songSetViewModel.AlbumSetId, songSetViewModel.Id);
+            if (songSetToEdit == null)
+            {
+                return HttpNotFound();
+            }
+            else
+            {
+                if (!ModelState.IsValid)
+                {
+                    return View(songSetViewModel);
+                }
+                else
+                {
+                    songSetToEdit.Name = songSetViewModel.Name;
+                    songSetService.Update(songSetToEdit);
+                    return RedirectToAction("Index");
+                }
+            }
+        }
+
+        public ActionResult DeleteSong(int albumId, int songId)
+        {
+            SongSet songSet = songSetService.Find(albumId, songId);
+            if (songSet == null)
+            {
+                return HttpNotFound();
+            }
+            else
+            {
+                songSetService.Delete(songId);
                 return RedirectToAction("Index");
             }
         }

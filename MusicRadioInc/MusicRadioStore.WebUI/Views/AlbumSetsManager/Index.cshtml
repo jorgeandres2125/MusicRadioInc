@@ -3,7 +3,7 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h2>Albums</h2>
+<h2>Albúms</h2>
 <form>
     <div class="form-row">
         <div class="form-group col-md-6">
@@ -40,18 +40,32 @@ else
                 <td>@album.Name</td>
                 <td>$@album.Price</td>
                 <td>
-                    <ul>
-                        @foreach (var cancion in album.SongSets)
-                        {
-                            <li>@cancion.Name</li>
-                        }
-                    </ul>
+                    <table id="tblSongs" class="table table-bordered table-hover">
+                        <tbody>
+                            @foreach (var cancion in album.SongSets)
+                            {
+                                <tr>
+                                    <td>@cancion.Name</td>
+                                    <td>
+                                        <a class="btn btn-primary" href="@Url.Action("EditSong", "AlbumSetsManager", new { albumId = album.Id,songId = cancion.Id })">
+                                            Editar Canción
+                                        </a>
+                                        <a class="btn btn-primary" href="@Url.Action("DeleteSong", "AlbumSetsManager", new { albumId = album.Id, songId = cancion.Id  })">
+                                            Eliminar Canción
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                            </tbody>
+                    </table>
                 </td>
                 <td>
                     <a class="btn btn-primary" href="@Url.Action("EditAlbum", "AlbumSetsManager", new { Id = album.Id })">
                         Editar Albúm
                     </a>
-
+                    <a class="btn btn-primary" href="@Url.Action("DeleteAlbum", "AlbumSetsManager", new { Id = album.Id })">
+                        Eliminar Albúm
+                    </a>
                 </td>
             </tr>
             }

@@ -18,6 +18,7 @@ namespace MusicRadioStore.Services.Services
             this.repository = _repository;
         }
 
+        
         public AlbumSet Find(int Id)
         {
             return repository.Find(Id);
@@ -47,6 +48,11 @@ namespace MusicRadioStore.Services.Services
         public void Update(AlbumSet albumSet)
         {
             repository.Update(albumSet);
+        }
+
+        public void Delete(int Id)
+        {
+            repository.Delete(Id);
         }
     }
 }

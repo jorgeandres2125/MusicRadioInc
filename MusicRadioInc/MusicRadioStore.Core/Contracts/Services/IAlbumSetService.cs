@@ -14,5 +14,6 @@ namespace MusicRadioStore.Core.Contracts.Services
         AlbumSet Find(int Id);
         void Insert(AlbumSet albumSet);
         void Update(AlbumSet albumSet);
+        void Delete(int Id);
     }
 }
