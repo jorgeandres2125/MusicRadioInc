@@ -23,35 +23,43 @@
         {
             using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "nav-link" }))
             {
-                <ul class="nav navbar-nav navbar-right">
-                    @Html.AntiForgeryToken()
-                    @*
+            <ul class="nav navbar-nav navbar-right">
+                @Html.AntiForgeryToken()
+                @*
+                <li class="nav-item active">
+                    <a class="nav-link" href="@Url.Action("About", "Home", null)">
+                        About
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="@Url.Action("Contact", "Home", null)">
+                        Contact
+                    </a>
+                </li>
+                *@
+                <li class="nav-item active">
+                    @Html.ActionLink("Hola " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { @class = "nav-link" })
+                </li>
+                @if (ViewContext.HttpContext.User.IsInRole("DirectorInventario"))
+                {
                     <li class="nav-item active">
-                        <a class="nav-link" href="@Url.Action("About", "Home", null)">
-                            About
+                        <a class="nav-link" href="@Url.Action("Index", "AlbumSetsManager", null)">
+                            Administrar Albums de Canciones
                         </a>
                     </li>
+                }
+                else if(ViewContext.HttpContext.User.IsInRole("Cliente"))
+                {
                     <li class="nav-item active">
-                        <a class="nav-link" href="@Url.Action("Contact", "Home", null)">
-                            Contact
+                        <a class="nav-link" href="@Url.Action("AlbumStore", "Home", null)">
+                            Tienda de Albums
                         </a>
                     </li>
-                    *@
-                    <li class="nav-item active">
-                        @Html.ActionLink("Hola " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { @class = "nav-link" })
-                    </li>
-                    @if (ViewContext.HttpContext.User.IsInRole("DirectorInventario"))
-                    {
-                        <li class="nav-item active">
-                            <a class="nav-link" href="@Url.Action("Index", "AlbumSetsManager", null)">
-                                Administrar Albums de Canciones
-                            </a>
-                        </li>
-                    }
-                    <li class="nav-item active">
-                        <a class="nav-link" href="javascript:document.getElementById('logoutForm').submit()">Salir</a>
-                    </li>
-                </ul>
+                }
+                <li class="nav-item active">
+                    <a class="nav-link" href="javascript:document.getElementById('logoutForm').submit()">Salir</a>
+                </li>
+            </ul>
             }
         }
     </div>

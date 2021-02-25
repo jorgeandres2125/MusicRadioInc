@@ -15,3 +15,4 @@ C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.Dat
 C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.DataAccess.SQL\obj\Debug\MusicRadioStore.DataAccess.SQL.Migrations.InitialSchema.resources
 C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.DataAccess.SQL\obj\Debug\MusicRadioStore.DataAccess.SQL.csproj.GenerateResource.cache
 C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.DataAccess.SQL\obj\Debug\MusicRadioStore.DataAccess.SQL.Migrations.AddUserIdToClient.resources
+C:\Users\George\Documents\GitHub\MusicRadioInc\MusicRadioInc\MusicRadioStore.DataAccess.SQL\obj\Debug\MusicRadioStore.DataAccess.SQL.Migrations.AddBasket.resources

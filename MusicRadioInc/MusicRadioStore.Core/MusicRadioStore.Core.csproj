@@ -44,9 +44,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contracts\Repositories\IAlbumSetRepository.cs" />
+    <Compile Include="Contracts\Repositories\IBasketRepository.cs" />
     <Compile Include="Contracts\Repositories\IClientRepository.cs" />
     <Compile Include="Contracts\Repositories\ISongSetRepository.cs" />
     <Compile Include="Contracts\Services\IAlbumSetService.cs" />
+    <Compile Include="Contracts\Services\IBasketService.cs" />
     <Compile Include="Contracts\Services\IClientService.cs" />
     <Compile Include="Contracts\Services\ISongSetService.cs" />
     <Compile Include="Models\AlbumSet.cs" />
@@ -58,6 +60,8 @@
     <Compile Include="Models\SongSet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\AlbumSetViewModel.cs" />
+    <Compile Include="ViewModels\BasketItemViewModel.cs" />
+    <Compile Include="ViewModels\BasketSummaryViewModel.cs" />
     <Compile Include="ViewModels\SongSetViewModel.cs" />
   </ItemGroup>
   <ItemGroup />

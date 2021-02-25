@@ -21,5 +21,7 @@ namespace MusicRadioStore.DataAccess.SQL
         public DbSet<SongSet> SongSets { get; set; }
         public DbSet<Purchase> Purchases { get; set; }
         public DbSet<PurchaseDatail> PurchaseDatails { get; set; }
+        public DbSet<Basket> Baskets { get; set; }
+        public DbSet<BasketItem> BasketItems { get; set; }
     }
 }

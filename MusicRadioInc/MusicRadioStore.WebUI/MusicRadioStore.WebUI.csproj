@@ -207,6 +207,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AlbumSetsManagerController.cs" />
+    <Compile Include="Controllers\BasketController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -220,6 +221,7 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AlbumSetsManagerCreateSongViewModel.cs" />
     <Compile Include="Models\AlbumSetsManagerIndexViewModel.cs" />
+    <Compile Include="Models\AlbumStoreViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -403,10 +405,12 @@
     <Content Include="Views\AlbumSetsManager\CreateSong.cshtml" />
     <Content Include="Views\AlbumSetsManager\EditAlbum.cshtml" />
     <Content Include="Views\AlbumSetsManager\EditSong.cshtml" />
+    <Content Include="Views\Home\AlbumStore.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\AlbumImages\" />
+    <Folder Include="Views\Basket\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
